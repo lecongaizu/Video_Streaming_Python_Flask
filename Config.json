@@ -1,0 +1,65 @@
+[
+    {
+        "upload_interval": 120,
+        "logrotate_interval": 1,
+        "device_id": 1,
+        "upload_settings": [
+            {
+                "classification": null,
+                "is_upload": true,
+                "type": "gps",
+                "period": "2.0"
+            },
+            {
+                "classification": null,
+                "is_upload": true,
+                "obd2_upload_settings": [
+                    {
+                        "mode": "01",
+                        "pid": "05"
+                    },
+                    {
+                        "mode": "01",
+                        "pid": "0C"
+                    },
+                    {
+                        "mode": "01",
+                        "pid": "0D"
+                    }
+                ],
+                "type": "obd2",
+                "period": "5.0"
+            },
+            {
+                "classification": null,
+                "is_upload": true,
+                "type": "adxl",
+                "period": "10.0"
+            },
+            {
+                "classification": null,
+                "is_upload": true,
+                "type": "bme",
+                "period": "10.0"
+            },
+            {
+                "classification": null,
+                "is_upload": true,
+                "type": "scd",
+                "period": "10.0"
+            },
+            {
+                "classification": "inside_camera",
+                "is_upload": false,
+                "type": "video",
+                "period": null
+            },
+            {
+                "classification": "outside_camera",
+                "is_upload": false,
+                "type": "video",
+                "period": null
+            }
+        ]
+    }
+]

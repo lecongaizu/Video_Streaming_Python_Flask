@@ -1,0 +1,57 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: black;
+    background-color:lightblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.active {
+    background-color:green;
+}
+
+.logout {
+    background-color:white;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<ul>
+  	<li><a href="{{ url_for('camera') }}">Camera</a></li>
+	<li style="float:right"><a class="logout" href="{{ url_for('login') }}">Logout</a></li>
+
+  </div>
+  {% block body %}{% endblock %}
+</ul>
+
+</body>
+</html>
+

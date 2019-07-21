@@ -1,0 +1,30 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+<form action="{{ url_for('camera') }}" method=post>
+<dl>
+<head>
+</head>
+<title>Video Streaming Demonstration</title>
+<body>
+  <h1>Video Camera </h1>
+	<body>
+         <p> Date-Time: {{time}}</p>
+	</body>
+	  
+  <div id="recorder">
+    <button id="record">START</button>
+    <button id="stop">FINISH</button>
+    <div style="margin-top: 2%">   
+    <a id="download"></a>
+    <script type="text/javascript" src="{{ url_for('static', filename='camera.js') }}"></script>      
+  </div>
+</body>
+    </dl>
+<body>
+    <h1>Video Streaming Demonstration</h1>
+    <img id="bg" src="{{ url_for('video_feed') }}">
+  </body>
+</form>
+{% endblock %}
